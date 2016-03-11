@@ -88,7 +88,7 @@ class Util
 		return DB::table('taggable_taggables')->distinct()
 			->where('taggable_type', '=', $className)
 			->join('taggable_tags', 'taggable_taggables.taggable_id', '=', 'taggable_tags.tag_id')
-			->orderBy('taggable_tags.normalized')
+			//->orderBy('taggable_tags.normalized')
 			->lists('taggable_tags.normalized');
 	}
 
